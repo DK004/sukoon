@@ -1,0 +1,66 @@
+body{
+    background-color: #12232e !important;
+}
+
+
+
+.nav a{
+    color: white !important;
+}
+
+.main::before{
+    content: "";
+    background-image: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=881&q=80);
+    background-size: cover;
+    opacity: 0.1;
+    position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+}
+.card{
+    margin: 20px;
+padding: 0 !important;
+box-shadow: 1px 2px 15px 1px rgba(0,0,0,0.5);
+transition: 0.5s ease-in-out;
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: none;
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out;
+}
+.card .gg-play-button-o:hover, .gg-play-pause:hover{
+    cursor: pointer;
+    color:#007cc7;
+
+}
+
+
+
+
+.card img{
+    height: 200px;
+}
+
+.thisRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gg-play-button-o, .gg-play-pause{
+    margin: 0px auto;
+}
+
+
+
+
+/* buttons styling */
+.playing{
+    transform: scale(0.95);
+    box-shadow: none;
+    transition: 0.5s ease-in-out;
+}
