@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="https://css.gg/css?=|play-button-o|play-button|play-pause" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- feedback -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Sukoon</title>
@@ -33,41 +33,44 @@
       </nav>
 
       
-
-
-
-
+<div class="main-but text-center">
+  <div class=" my-5"  style="color: white;" ><i style="font-size: 5rem;display: block;" class="fa fa-play play" id="play" onclick="playPause()"></i>  <i style="font-size: 5rem;display: none;" class="fa fa-pause pause" id="pause" onclick="playPause()"></i>  </div>
+</div>
 
 <div class="AllSounds container-fluid text-center">
     
 <div class="thisRow">
-  <div class="card bg-dark" style="width: 20rem;" onclick="playPause(0)">
+
+ 
+  <div class="card bg-dark" style="width: 20rem;">
     <div class=" text-center">
       <img src="https://images.unsplash.com/photo-1498847559558-1e4b1a7f7a2f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
       <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Rain</div>
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Rain</div>
+          <input type="range" min="0" max="100" value="50"  oninput="RainVol(this.value)">
         </div>
       </div>
     </div>
 
   
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(1)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1587228270638-2c0ac062c01a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Thunder</div>
+  
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Thunder</div>
+          <input type="range" min="0" max="100" value="0"  oninput="ThunderVol(this.value)">
         </div>
       </div>
     </div>
 
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(2)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1464030871258-a01dfd38220a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1187&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Waves</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Waves</div>
+          <input type="range" min="0" max="100" value="0"  oninput="WavesVol(this.value)">
         </div>
       </div>
     </div>
@@ -77,32 +80,35 @@
 
 
 <div class="thisRow">
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(3)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1533985062386-ef0837f31bc0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Wind</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Wind</div>
+          <input type="range" min="0" max="100" value="0"  oninput="WindVol(this.value)">
         </div>
       </div>
     </div>
 
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(4)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1506333438925-a6203045b492?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Birds</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Birds</div>
+          <input type="range" min="0" max="100" value="0"  oninput="BirdsVol(this.value)">
         </div>
       </div>
     </div>
 
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(5)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1596705210572-ab36fe931e78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Insects</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Insects</div>
+          <input type="range" min="0" max="100" value="0"  oninput="InsectsVol(this.value)">
         </div>
       </div>
     </div>
@@ -112,33 +118,36 @@
 
 <div class="thisRow">
    
-  <div class="card bg-dark" style="width: 20rem;" onclick='playPause(6)'>
+  <div class="card bg-dark" style="width: 20rem;">
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1503516459261-40c66117780a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Camp-Fire</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Camp-Fire</div>
+          <input type="range" min="0" max="100" value="0"  oninput="FireVol(this.value)">
         </div>
       </div>
     </div>
    
    
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(7)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1579519772836-2732b96a6306?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Traffic Jam</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Traffic Jam</div>
+          <input type="range" min="0" max="100" value="0"  oninput="TrafficVol(this.value)">
         </div>
       </div>
     </div>
 
-    <div class="card bg-dark" style="width: 20rem;" onclick='playPause(8)'>
+    <div class="card bg-dark" style="width: 20rem;" >
         <div class=" text-center">
         <img src="https://images.unsplash.com/photo-1494346480775-936a9f0d0877?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1003&q=80" class="card-img-top" alt="...">
         <div class="card-img-overlay text-center">
-          <h5 class="h1 my-5" style="color: white;" ><i class="gg-play-button-o play"></i>  <i class="gg-play-pause pause"></i>  </h5>
-          <div class="h4 pt-4" style="color: white; opacity: 0.7;">Cafe</div>
+          
+          <div class="h4 mt-5 mb-5" style="color: white; opacity: 0.7;">Cafe</div>
+          <input type="range" min="0" max="100" value="0"  oninput="CafeVol(this.value)">
         </div>
       </div>
     </div>

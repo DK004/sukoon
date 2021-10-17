@@ -1,56 +1,65 @@
-const play = document.getElementsByClassName('play');
-const pause = document.getElementsByClassName('pause');
+const play = document.getElementById('play');
+const pause = document.getElementById('pause');
 const card = document.getElementsByClassName('card');
+const volSlider = document.getElementsByClassName('volumeSlider');
 
 
 // howler code
 var Rain = new Howl({
     src: ['sounds/rain.mp3'],
     loop:true,
-    // volume:0.6,
+    volume:0.5
   });
   var Thunder = new Howl({
     src: ['sounds/thunder.mp3'],
     loop:true,
+    volume:0
   });
 
   var Wave = new Howl({
     src: ['sounds/waves.mp3'],
     loop:true,
+    volume:0
   });
 
 
   var Wind = new Howl({
     src: ['sounds/wind.mp3'],
     loop:true,
+    volume:0
   });
 
 
   var Birds = new Howl({
     src: ['sounds/birds.mp4'],
     loop:true,
+    volume:0
 });
 
 
   var Insects = new Howl({
       src: ['sounds/insects.mp3'],
       loop:true,
+      volume:0
     });
     
     
     var Traffic = new Howl({
         src: ['sounds/traffic.mp3'],
         loop:true,
+        volume:0
     });
     
     var Cafe = new Howl({
         src: ['sounds/cafe.mp4'],
         loop:true,
+        volume:0
     });
     
     var Fire = new Howl({
         src: ['sounds/fire.mp3'],
         loop:true,
+        volume:0
     });
     
     
@@ -59,82 +68,82 @@ var Rain = new Howl({
     
     
     
+    //change all pause to play symbol 
     
-    for(i=0;i<pause.length;i++){
-        pause[i].style.display = "none";
+        // pause.style.display = "none";
+function playPause(){
+    if(pause.style.display === "none"){
+        pause.style.display="block";
+        play.style.display = "none";
+        Rain.play();
+        Thunder.play();
+        Wind.play();
+        Fire.play();
+        Cafe.play();
+        Wave.play();
+        Traffic.play();
+        Birds.play();
+        Insects.play();
+    }else{
+        pause.style.display = "none";
+        play.style.display ="block";
+        Rain.pause();
+        Thunder.pause();
+        Wind.pause();
+        Fire.pause();
+        Cafe.pause();
+        Wave.pause();
+        Traffic.pause();
+        Birds.pause();
+        Insects.pause();
     }
+}
     
-    function playPause(e){
-        
-        if(play[e].style.display === 'none'){
-            play[e].style.display ="block";
-            pause[e].style.display = "none";
-            card[e].classList.remove('playing');
-            // stoping the sound
-            if(e===0){
-                Rain.fade(2,0,2000);
-                Rain.stop();
-            }
-            if(e==1){
-                Thunder.stop();
-            }
-            if(e==2){
-                Wave.stop();
-            }
-            if(e==3){
-                Wind.stop();
-            }
-            if(e==4){
-                Birds.stop();
-            }
-            if(e==5){
-                Insects.stop();
-            }
-            if(e==6){
-                Fire.stop();
-            }
-            if(e==7){
-                Traffic.stop();
-            }if(e==8){
-                Cafe.stop();
-            }
-            
-        }else{
-            pause[e].style.display= "block";
-            card[e].classList.add('playing');
-            play[e].style.display="none";
-            // playing sound
-            if(e===0){
-                Rain.play();
-            }
-            if(e==1){
-                Thunder.play();
-            }
-            if(e==2){
-                Wave.play();
-            }
-            if(e==3){
-                Wind.play();
-            }
-            if(e==4){
-                Birds.play();
-            }
-            if(e==5){
-                Insects.play();
-            }
-            if(e==6){
-                Fire.play();
-            }
-            if(e==7){
-                Traffic.play();
-            }
-            if(e==8){
-                Cafe.play();
-            }
-        }
-    }
-    // card[e].children[0].children[1].children[1].innerText;
-    
+
+// volume options
+function RainVol(value) {
+  Rain.volume(value/100);
+}
+
+function ThunderVol(value) {
+  Thunder.volume(value/100);
+}
+
+function WavesVol(value) {
+  Wave.volume(value/100);
+}
+
+function WindVol(value) {
+  Wind.volume(value/100);
+}
+
+function BirdsVol(value) {
+  Birds.volume(value/100);
+}
+
+function InsectsVol(value) {
+  Insects.volume(value/100);
+}
+
+function RainVol(value) {
+  Rain.volume(value/100);
+}
+
+function FireVol(value) {
+  Fire.volume(value/100);
+}
+
+function TrafficVol(value) {
+  Traffic.volume(value/100);
+}
+
+function CafeVol(value) {
+  Cafe.volume(value/100);
+}
+
+
+
+
 
 
 

@@ -9,7 +9,11 @@ body{
 }
 
 .mainIndex{
-    background-color: #101011;
+    /* background-color: #101011; */
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .main::before{
@@ -27,13 +31,7 @@ body{
     margin: 20px;
 padding: 0 !important;
 box-shadow: 1px 2px 15px 1px rgba(0,0,0,0.5);
-transition: 0.5s ease-in-out;
-}
-.card:hover{
-    cursor: pointer;
-    box-shadow: none;
-    transform: scale(0.95);
-    transition: 0.5s ease-in-out;
+
 }
 .card .gg-play-button-o:hover, .gg-play-pause:hover{
     cursor: pointer;
@@ -55,11 +53,6 @@ transition: 0.5s ease-in-out;
     flex-wrap: wrap;
 }
 
-.gg-play-button-o, .gg-play-pause{
-    margin: 0px auto;
-}
-
-
 
 
 /* buttons styling */
@@ -70,6 +63,12 @@ transition: 0.5s ease-in-out;
 }
 
 
+#play, #pause{
+  cursor: pointer;
+}
+#play:hover ,#pause:hover{
+  color: #007cc7;
+}
 
 
 
