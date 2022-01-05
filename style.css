@@ -8,15 +8,17 @@ body{
     color: white !important;
 }
 
+
 .mainIndex{
+/* position:relative; */
     /* background-color: #101011; */
     background: #0F2027;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to top, #2C5364, #203A43, #0F2027)  ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
-.main::before{
+/* .main::before{
     content: "";
     background-image: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=881&q=80);
     background-size: cover;
@@ -26,7 +28,7 @@ background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ 
       right: 0px;
       bottom: 0px;
       left: 0px;
-}
+} */
 .card{
     margin: 20px;
 padding: 0 !important;
@@ -126,3 +128,5 @@ input, button, textarea {
     margin-top: 10px;
     align-self: flex-end;
   }
+
+  
